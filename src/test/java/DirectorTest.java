@@ -17,4 +17,9 @@ public class DirectorTest {
     public void hasName() {
         assertEquals("Tony Stark", director.getName());
     }
+
+    @Test
+    public void hasNINumber() {
+        assertEquals("5", director.getnINumber());
+    }
 }
