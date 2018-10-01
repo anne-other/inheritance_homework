@@ -2,7 +2,14 @@ package Staff.Management;
 
 public class Director extends Manager {
 
-    public Director(String name, String nINumber, double salary, String deptName) {
+    private double budget;
+
+    public Director(String name, String nINumber, double salary, String deptName, double budget) {
         super(name, nINumber, salary, deptName);
+        this.budget = budget;
+    }
+
+    public double getBudget() {
+        return budget;
     }
 }

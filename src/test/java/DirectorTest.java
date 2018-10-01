@@ -10,7 +10,7 @@ public class DirectorTest {
 
     @Before
     public void setUp() throws Exception {
-        director = new Director("Tony Stark", "5", 5000000.00, "Ironing");
+        director = new Director("Tony Stark", "5", 5000000.00, "Ironing", 1000000000.00);
     }
 
     @Test
@@ -42,5 +42,10 @@ public class DirectorTest {
     @Test
     public void hasDeptName() {
         assertEquals("Ironing", director.getDeptName());
+    }
+
+    @Test
+    public void hasBudget() {
+        assertEquals(1000000000.00, director.getBudget(), 0.01);
     }
 }
