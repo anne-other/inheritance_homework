@@ -44,4 +44,10 @@ public class DataBaseAdminTest {
         dataBaseAdmin.raiseSalary(-1.00);
         assertEquals(1.00, dataBaseAdmin.getSalary(), 0.01);
     }
+
+    @Test
+    public void canChangeName() {
+        dataBaseAdmin.setName("Vision");
+        assertEquals("Vision", dataBaseAdmin.getName());
+    }
 }
