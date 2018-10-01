@@ -3,6 +3,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class DataBaseAdminTest {
 
@@ -49,5 +50,12 @@ public class DataBaseAdminTest {
     public void canChangeName() {
         dataBaseAdmin.setName("Vision");
         assertEquals("Vision", dataBaseAdmin.getName());
+    }
+
+    @Test
+    public void nameCannotBeNull() {
+        dataBaseAdmin.setName(null);
+        assertNotNull(dataBaseAdmin.getName());
+        assertEquals("Jarvis", dataBaseAdmin.getName());
     }
 }
