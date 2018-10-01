@@ -38,4 +38,9 @@ public class DirectorTest {
     public void canHavePayBonus() {
         assertEquals(50000.00, director.paybonus(), 0.01);
     }
+
+    @Test
+    public void hasDeptName() {
+        assertEquals("Ironing", director.getDeptName());
+    }
 }
