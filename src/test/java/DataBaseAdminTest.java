@@ -17,4 +17,9 @@ public class DataBaseAdminTest {
     public void hasName() {
         assertEquals("Jarvis", dataBaseAdmin.getName());
     }
+
+    @Test
+    public void hasNINumber() {
+        assertEquals("S015JARV15", dataBaseAdmin.getnINumber());
+    }
 }
