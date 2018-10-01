@@ -38,4 +38,10 @@ public class DataBaseAdminTest {
     public void canHavePayBonus() {
         assertEquals(0.01, dataBaseAdmin.paybonus(), 0.001);
     }
+
+    @Test
+    public void payriseCantBeNegative() {
+        dataBaseAdmin.raiseSalary(-1.00);
+        assertEquals(1.00, dataBaseAdmin.getSalary(), 0.01);
+    }
 }
