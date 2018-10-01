@@ -27,4 +27,10 @@ public class DataBaseAdminTest {
     public void hasSalary() {
         assertEquals(1.00, dataBaseAdmin.getSalary(), 0.01);
     }
+
+    @Test
+    public void canHaveSalaryRaise() {
+        dataBaseAdmin.raiseSalary(1.00);
+        assertEquals(2.00, dataBaseAdmin.getSalary(), 0.01);
+    }
 }
