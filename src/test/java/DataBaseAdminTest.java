@@ -22,4 +22,9 @@ public class DataBaseAdminTest {
     public void hasNINumber() {
         assertEquals("S015JARV15", dataBaseAdmin.getnINumber());
     }
+
+    @Test
+    public void hasSalary() {
+        assertEquals(1.00, dataBaseAdmin.getSalary(), 0.01);
+    }
 }
