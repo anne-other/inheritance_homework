@@ -10,7 +10,7 @@ public class ManagerTest {
 
     @Before
     public void setUp() throws Exception {
-        manager = new Manager("Pepper Potts","AV3N63R", 1000000.00);
+        manager = new Manager("Pepper Potts","AV3N63R", 1000000.00, "Assembling");
     }
 
     @Test
@@ -37,5 +37,10 @@ public class ManagerTest {
     @Test
     public void canGetBonus() {
         assertEquals(10000.00, manager.paybonus(), 0.01);
+    }
+
+    @Test
+    public void hasDept() {
+        assertEquals("Assembling", manager.getDeptName());
     }
 }
