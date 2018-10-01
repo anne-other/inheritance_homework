@@ -28,4 +28,10 @@ public class DeveloperTest {
     public void hasSalary() {
         assertEquals(20.00, developer.getSalary(), 0.01);
     }
+
+    @Test
+    public void canGetSalaryRaise() {
+        developer.raiseSalary(5.00);
+        assertEquals(25.00, developer.getSalary(), 0.01);
+    }
 }
