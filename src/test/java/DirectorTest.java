@@ -3,6 +3,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class DirectorTest {
 
@@ -47,5 +48,24 @@ public class DirectorTest {
     @Test
     public void hasBudget() {
         assertEquals(1000000000.00, director.getBudget(), 0.01);
+    }
+
+    @Test
+    public void payriseCantBeNegative() {
+        director.raiseSalary(-1.00);
+        assertEquals(5000000.00, director.getSalary(), 0.01);
+    }
+
+    @Test
+    public void canChangeName() {
+        director.setName("I AM Ironman");
+        assertEquals("I AM Ironman", director.getName());
+    }
+
+    @Test
+    public void nameCannotBeNull() {
+        director.setName(null);
+        assertNotNull(director.getName());
+        assertEquals("Tony Stark", director.getName());
     }
 }

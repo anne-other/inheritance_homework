@@ -3,6 +3,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
 public class DeveloperTest {
@@ -38,5 +39,24 @@ public class DeveloperTest {
     @Test
     public void canGetBonus() {
         assertEquals(0.20, developer.paybonus(), 0.01);
+    }
+
+    @Test
+    public void payriseCantBeNegative() {
+        developer.raiseSalary(-1.00);
+        assertEquals(20.00, developer.getSalary(), 0.01);
+    }
+
+    @Test
+    public void canChangeName() {
+        developer.setName("Thor");
+        assertEquals("Thor", developer.getName());
+    }
+
+    @Test
+    public void nameCannotBeNull() {
+        developer.setName(null);
+        assertNotNull(developer.getName());
+        assertEquals("Bruce Banner", developer.getName());
     }
 }
