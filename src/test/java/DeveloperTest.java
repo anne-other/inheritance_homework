@@ -23,4 +23,9 @@ public class DeveloperTest {
     public void hasNINumber() {
         assertEquals("H01K", developer.getnINumber());
     }
+
+    @Test
+    public void hasSalary() {
+        assertEquals(20.00, developer.getSalary(), 0.01);
+    }
 }
