@@ -22,4 +22,9 @@ public class DirectorTest {
     public void hasNINumber() {
         assertEquals("5", director.getnINumber());
     }
+
+    @Test
+    public void hasSalary() {
+        assertEquals(5000000.00, director.getSalary(), 0.01);
+    }
 }
