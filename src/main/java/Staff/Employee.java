@@ -4,7 +4,7 @@ public abstract class Employee {
 
     private String name;
     private String nINumber;
-    private double salary;
+    protected double salary;
 
     public Employee(String name, String nINumber, double salary) {
         this.name = name;
